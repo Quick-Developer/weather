@@ -34,7 +34,7 @@ class EventsHandler {
     }
 
     registerRemoveWeather() {
-        this.$list.on('click', '.remove-forecast', (event) => {
+        this.$list.on('click', '#remove-forecast', (event) => {
             let index = $(event.currentTarget).closest('.forecast').index();;
             this.weathersRepository.removeForecast(index);
             this.weathersRenderer.renderForecasts(this.weathersRepository.weatherForecasts);
@@ -44,7 +44,7 @@ class EventsHandler {
 
     registerToggleComments() {
         this.$list.on('click', '.toggle-comments', (event) => {
-            let $clickedForecast = $(event.currentTarget).closest('.forecast');
+            let $clickedForecast = $(event.currentTarget).closest('.forecast');            
             $clickedForecast.find('.comments-container').toggleClass('show');
         });
     }
@@ -68,7 +68,7 @@ class EventsHandler {
     }
 
     registerRemoveComment() {
-        this.$list.on('click', '.remove-comment', (event) => {
+        this.$list.on('click', '#remove-comment', (event) => {
             let $commentsList = $(event.currentTarget).closest('.forecast').find('.comments-list');
             let forecastIndex = $(event.currentTarget).closest('.forecast').index();
             let commentIndex = $(event.currentTarget).closest('.comment').index();

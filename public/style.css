@@ -170,9 +170,11 @@ hr.divider {
 }
 
 .right_button {
+  all: revert;
   position: absolute;
   right: 0;
-  float: right;
+  float: left;
+  margin: -5px 10px 0px 0px;
 }
 .post {
   padding: 20px 0;
